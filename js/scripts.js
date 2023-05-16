@@ -11,6 +11,11 @@ height: 5,
 types: ['water'] },
 ];
 
-for (let i=0; i < pokemonList.length; i++) {
-    document.write (pokemonList[i]);
+for (let i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].height > 6) {
+        document.write(pokemonList[i].name + ' (height: ' + (pokemonList[i].height) + ')' + '- wow, that is a large pokemon.' + ' <br>');
+    }
+    else {
+        document.write(pokemonList[i].name + ' (height: ' + (pokemonList[i].height) + ')<br>');
+    }
 }
