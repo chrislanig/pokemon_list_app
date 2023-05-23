@@ -11,11 +11,17 @@ height: 5,
 types: ['water'] },
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
+
+
+/*for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height > 6) {
         document.write(pokemonList[i].name + ' (height: ' + (pokemonList[i].height) + ')' + '- wow, that is a large pokemon.' + ' <br>');
     }
     else {
         document.write(pokemonList[i].name + ' (height: ' + (pokemonList[i].height) + ')<br>');
     }
-}
+}*/
+
+pokemonList.forEach(function(pokemon){
+    document.write(pokemon.name + "'s height is " + pokemon.height + " and its ability is " + pokemon.types + ". ");
+});
