@@ -17,6 +17,9 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listPokemon.appendChild(button);
     pokeList.appendChild(listPokemon);
+    button.addEventListener('click', function (event) {
+      showDetails(pokemon);
+    });
   }
 
   return {
@@ -39,8 +42,8 @@ height: 5,
 types: ['water'] },
 ];
 
-pokemonList.getall().forEach(function(pokemon){
-  pokemonList.addListItem(pokemon);
+pokemonRepository.getall().forEach(function(pokemon){
+  pokemonRepository.addListItem(pokemon);
 
   /*let pokeList = document.querySelector(".pokemon-list");
   let listPokemon = document.createElement("li");
