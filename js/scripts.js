@@ -9,16 +9,20 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
   function addListItem(pokemon){
     let pokeList = document.querySelector(".pokemon-list");
     let listPokemon = document.createElement("li");
+    button.addEventListener('click', function (event) {
+      showDetails(pokemon);
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-class");
     listPokemon.appendChild(button);
     pokeList.appendChild(listPokemon);
-    button.addEventListener('click', function (event) {
-      showDetails(pokemon);
     });
   }
 
@@ -42,7 +46,7 @@ height: 5,
 types: ['water'] },
 ];
 
-pokemonRepository.getall().forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){
   pokemonRepository.addListItem(pokemon);
 
   /*let pokeList = document.querySelector(".pokemon-list");
