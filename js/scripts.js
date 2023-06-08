@@ -37,7 +37,7 @@ const pokemonRepository = (() => {
 
     button.innerText = pokemon.name;
     
-    button.classList.add("button-class");
+    button.classList.add("button-class", "btn", "btn-light","btn-link");
 
     listPokemon.appendChild(button);
 
